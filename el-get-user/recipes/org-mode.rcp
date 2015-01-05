@@ -1,0 +1,6 @@
+(:name org-mode
+       :description "Org-mode is for keeping notes, maintaining ToDo lists, doing project planning, and authoring with a fast and effective plain-text system."
+       :type git
+       :website "http://orgmode.org/"
+       :url "git://orgmode.org/org-mode.git"
+       :load-path ("." "contrib/lisp" "lisp"))

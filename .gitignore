@@ -1,0 +1,9 @@
+.smex-items
+auto-save-list/
+el-get-user/init/*.elc
+el-get-user/init/init-sql-preset-el.el
+el-get/
+elpa/
+places
+savehist
+tramp

@@ -1,0 +1,5 @@
+(:name sql-preset-el
+       :website "https://github.com/ieure/sql-preset-el"
+       :description "Preset SQL connections for Emacs"
+       :type github
+       :pkgname "ieure/sql-preset-el")

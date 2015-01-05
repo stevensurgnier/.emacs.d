@@ -1,0 +1,28 @@
+;;; unicode.el --- unicode text
+
+(defmacro unicode (fn text)
+  `(defun ,(intern (format "unicode-%s" fn)) ()
+        (interactive)
+        (insert ,text)))
+
+(unicode "tm" "™")
+(unicode "element-of" "∈")
+(unicode "for-all" "∀")
+(unicode "intersection" "∩")
+(unicode "union" "∪")
+(unicode "subset-of" "⊂")
+(unicode "superset-of" "⊃")
+(unicode "subset-of-or-equal-to" "⊆")
+(unicode "supserset-of-or-equal-to" "⊇")
+(unicode "less-than-or-equal-to" "≤")
+(unicode "greater-than-or-equal-to" "≥")
+(unicode "approximately-equal-to" "≅")
+(unicode "proportional-to" "∝")
+(unicode "plus-or-minus" "±")
+(unicode "infinity" "∞")
+(unicode "sqrt" "√")
+(unicode "sum" "∑")
+(unicode "product" "∏")
+(unicode "integral" "∫")
+
+(provide 'unicode)
