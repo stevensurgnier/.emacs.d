@@ -39,6 +39,7 @@
     shell-here
     smex
     solarized-theme
+    ssh
     yaml-mode)
   "Default packages")
 
