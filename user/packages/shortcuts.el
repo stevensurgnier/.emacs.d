@@ -13,7 +13,7 @@
 (defun jenkins (job)
   "Open a jenkins job"
   (interactive "s job: ")
-  (browse-url (format "http://jenkins.banksimple.com/job/%s" job)))
+  (browse-url (format "http://jenkins-build.banksimple.com/job/%s" job)))
 
 (defun thesaurus (term)
   "Open thesaurus for a given term"
