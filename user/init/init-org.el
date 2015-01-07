@@ -17,5 +17,7 @@
 			       (ruby . t)
 			       (perl . t)))
 
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+
 (require 'steven-bindings)
 (define-key steven/bindings-map (kbd "C-c a") 'org-agenda)
