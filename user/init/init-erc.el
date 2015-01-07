@@ -72,9 +72,11 @@
       erc-log-matches-alist '((keyword . "&activity")
                               (current-nick . "&activity"))
       erc-generate-log-file-name-function 'erc-generate-log-file-name-with-date
+      erc-hide-list '("JOIN" "NICK" "PART" "QUIT")
       erc-track-exclude-types '("JOIN"
                                 "NICK"
                                 "PART"
+				"TOPIC"
                                 "QUIT"
                                 "MODE"
                                 "NOTICE"
@@ -87,8 +89,6 @@
                                 "477" ;; NoChanModes
                                 )
       erc-track-switch-direction 'importance
-      erc-track-use-faces t
-      erc-track-exclude '("#clojure" "#storm")
       erc-timestamp-mode t
       erc-server-303-functions nil
       erc-server-coding-system '(utf-8 . utf-8)
@@ -96,17 +96,34 @@
       erc-autojoin-timing :ident
       erc-flood-protect nil
       erc-max-buffer-size 50000
-      erc-current-nick-highlight-type 'all
+      erc-current-nick-highlight-type 'nick
+      erc-track-use-faces t
+      erc-track-faces-priority-list '(erc-current-nick-face
+				      erc-keyword-face
+				      erc-direct-msg-face
+				      erc-nick-msg-face
+				      erc-prompt-face
+				      erc-notice-face)
+      erc-track-priority-faces-only 'all
       erc-hide-timestamps nil
       erc-timestamp-only-if-changed-flag nil
       erc-timestamp-format "%Y-%m-%d %H:%M:%S "
-      erc-insert-timestamp-function 'erc-insert-timestamp-left
-      erc-track-faces-priority-list '(erc-current-nick-face
-                                      erc-keyword-face
-                                      erc-prompt-face
-                                      erc-nick-msg-face
-                                      erc-direct-msg-face
-                                      erc-notice-face))
+      erc-insert-timestamp-function 'erc-insert-timestamp-left)
+
+;; make private messages appear urgent
+(defadvice erc-track-find-face
+    (around erc-track-find-face-promote-query activate)
+  (if (erc-query-buffer-p)
+      (setq ad-return-value (intern "erc-current-nick-face"))
+    ad-do-it))
+
+(defadvice erc-track-modified-channels
+    (around erc-track-modified-channels-promote-query activate)
+  (if (erc-query-buffer-p)
+      (setq erc-track-priority-faces-only 'nil))
+  ad-do-it
+  (if (erc-query-buffer-p)
+      (setq erc-track-priority-faces-only 'all)))
 
 (defun erc-simple ()
   "Connect to Simple."
