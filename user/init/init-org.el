@@ -8,7 +8,8 @@
 (setq org-log-done 'time
       org-pretty-entities t
       org-use-sub-superscripts '{}
-      org-src-fontify-natively t)
+      org-src-fontify-natively t
+      org-agenda-files '("~/notes/planner.org"))
 
 (org-babel-do-load-languages 'org-babel-load-languages
 			     '((sh . t)
