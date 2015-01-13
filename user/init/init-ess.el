@@ -3,3 +3,4 @@
 
 (require 'ess-site)
 (ess-toggle-underscore nil)
+(setq ess-default-style 'OWN)
