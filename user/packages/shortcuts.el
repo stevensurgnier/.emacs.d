@@ -18,12 +18,12 @@
 (defun thesaurus (term)
   "Open thesaurus for a given term"
   (interactive "s term: ")
-  (browse-url (format "http://www.thesaurus.com/browse/%s" term)))
+  (eww (format "http://www.thesaurus.com/browse/%s" term)))
 
 (defun dictionary (term)
   "Open dictionary for a given term"
   (interactive "s term: ")
-  (browse-url (format "http://dictionary.reference.com/browse/%s" term)))
+  (eww (format "http://dictionary.reference.com/browse/%s" term)))
 
 (defun banner (name)
   "Create a new banner"
