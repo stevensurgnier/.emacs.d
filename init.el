@@ -20,6 +20,7 @@
 ;; default packages
 (defvar steven/packages
   '(clojure-mode
+		dash-at-point
     el-get
     erc
     erc-hl-nicks
