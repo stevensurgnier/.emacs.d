@@ -128,7 +128,14 @@
 (defun erc-simple ()
   "Connect to Simple."
   (interactive)
-  (erc-tls :server    "chat.banksimple.com"
-           :port      9999
-           :nick      "ssurgnier"
-           :full-name "Steven Surgnier"))
+	(let* ((server "chat.banksimple.com")
+				 (port 9999)
+				 (nick "ssurgnier")
+				 (buffer (format "%s:%s" server port)))
+		(kill-buffer buffer)
+		(erc-tls :server    server
+						 :port      port
+						 :nick      nick
+						 :full-name "Steven Surgnier")
+		(switch-to-buffer buffer)
+		(insert (format "/pass %s:" nick))))
