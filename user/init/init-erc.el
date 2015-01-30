@@ -139,3 +139,17 @@
 						 :full-name "Steven Surgnier")
 		(switch-to-buffer buffer)
 		(insert (format "/pass %s:" nick))))
+
+(defun erc-freenode ()
+  "Connect to freenode."
+  (interactive)
+	(let* ((server "irc.freenode.net")
+				 (port 6667)
+				 (buffer (format "%s:%s" server port)))
+		(kill-buffer buffer)
+		(erc :server    server
+				 :port      port
+				 :nick      "stevensurgnier"
+				 :full-name "Steven Surgnier")
+		(switch-to-buffer buffer)
+		(insert "/msg NickServ identify ")))
