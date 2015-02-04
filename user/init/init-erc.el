@@ -132,7 +132,7 @@
 				 (port 9999)
 				 (nick "ssurgnier")
 				 (buffer (format "%s:%s" server port)))
-		(kill-buffer buffer)
+		(if (get-buffer buffer) (kill-buffer buffer))
 		(erc-tls :server    server
 						 :port      port
 						 :nick      nick
@@ -146,7 +146,7 @@
 	(let* ((server "irc.freenode.net")
 				 (port 6667)
 				 (buffer (format "%s:%s" server port)))
-		(kill-buffer buffer)
+		(if (get-buffer buffer) (kill-buffer buffer))
 		(erc :server    server
 				 :port      port
 				 :nick      "stevensurgnier"
