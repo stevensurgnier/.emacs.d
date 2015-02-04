@@ -5,8 +5,13 @@
 ;; environment
 (setq explicit-shell-file-name "/bin/bash")
 
-(setenv "PATH" (concat "/usr/local/bin:/opt/local/bin:/usr/bin:/bin"
-                       (getenv "PATH")))
+(setq exec-path
+      (append (mapcar 'expand-file-name '("/usr/local/bin"
+																					"~/bin"))
+							exec-path))
+
+(setenv "PATH" (mapconcat 'identity exec-path path-separator))
+
 (require 'cl)
 
 ;; package management
