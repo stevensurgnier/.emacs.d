@@ -9,7 +9,8 @@
       org-pretty-entities t
       org-use-sub-superscripts '{}
       org-src-fontify-natively t
-      org-agenda-files '("~/notes/planner.org"))
+      org-agenda-files '("~/notes/planner.org")
+			org-startup-with-inline-images t)
 
 (org-babel-do-load-languages 'org-babel-load-languages
 			     '((sh . t)
