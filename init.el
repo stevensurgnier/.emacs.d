@@ -121,9 +121,9 @@
       visible-bell t
       make-backup-files nil
       backup-inhibited t
-      tab-width 2
-      default-tab-width 2
-      indent-tabs-mode nil)
+      default-tab-width 2)
+(setq-default tab-width 2
+              indent-tabs-mode nil)
 (load-theme 'solarized-dark t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
