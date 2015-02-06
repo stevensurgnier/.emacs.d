@@ -25,8 +25,8 @@
 ;; default packages
 (defvar steven/packages
   '(cider
-		clojure-mode
-		dash-at-point
+    clojure-mode
+    dash-at-point
     el-get
     erc
     erc-hl-nicks
