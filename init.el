@@ -24,8 +24,7 @@
 
 ;; default packages
 (defvar steven/packages
-  '(cider
-    clojure-mode
+  '(clojure-mode
     dash-at-point
     el-get
     erc
@@ -33,7 +32,6 @@
     ess
     ess-R-data-view
     find-file-in-project
-    flycheck
     gist
     ibuffer-git
     magit
@@ -45,8 +43,8 @@
     scratch
     shell-here
     smex
-    solarized-theme
     smtpmail
+    solarized-theme
     ssh
     yaml-mode)
   "Default packages")
@@ -79,8 +77,12 @@
       el-get-user-package-directory (expand-file-name "el-get-user/init"
 						      user-emacs-directory))
 (defvar steven/el-get-packages
-  '(mu4e
+  '(cider
+    dash
+    flycheck
+    mu4e
     org-mode
+    smart-mode-line
     sql-preset-el)
   "El-get packages")
 
@@ -133,6 +135,7 @@
 (show-paren-mode t)
 (set-fringe-mode 0)
 (winner-mode 1)
+(setq confirm-nonexistent-file-or-buffer nil)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; always use UTF-8
@@ -143,10 +146,17 @@
 ;; start in fullscreen
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
-;; display time
+;; modeline
+(setq display-time-format "%a %Y-%m-%d %H:%M:%S"
+      display-time-default-load-average nil
+;;      display-time-24hr-format t
+      )
 (display-time-mode 1)
-(setq display-time-24hr-format t)
-(setq display-time-format "%a %Y-%m-%d %H:%M:%S")
+(line-number-mode 0)
+(column-number-mode 0)
+(size-indication-mode 0)
+(display-battery-mode 0)
+(which-function-mode 0)
 
 ;; left cmd as meta
 (setq mac-option-key-is-meta nil
