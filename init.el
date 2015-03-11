@@ -46,6 +46,7 @@
     shell-here
     smex
     solarized-theme
+    smtpmail
     ssh
     yaml-mode)
   "Default packages")
@@ -78,7 +79,8 @@
       el-get-user-package-directory (expand-file-name "el-get-user/init"
 						      user-emacs-directory))
 (defvar steven/el-get-packages
-  '(org-mode
+  '(mu4e
+    org-mode
     sql-preset-el)
   "El-get packages")
 
