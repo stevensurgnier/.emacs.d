@@ -2,7 +2,7 @@
 
 (mapc (apply-partially 'add-to-list 'ffip-patterns)
       '("*.java" "*.sql" "*.clj" "*.cljs" "*.erb" "*.scala" "*.R"
-        "pom.xml" "*.yml" "*.py" "Makefile" "*.json"))
+        "pom.xml" "*.yml" "*.py" "Makefile" "*.json" "*.el"))
 
 (setq ffip-find-options "-not -path '*/target/*'")
 
