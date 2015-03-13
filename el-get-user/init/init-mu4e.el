@@ -1,14 +1,16 @@
 (require 'mu4e)
 
 (setq
- mu4e-maildir                "~/mail"
- user-mail-address           "stevensurgnier@gmail.com"
- my-mu4e-default-account     "stevensurgnier@gmail.com"
- mu4e-get-mail-command       "true"
- mu4e-update-interval        nil
- mu4e-sent-messages-behavior 'delete
- mu4e-user-mail-address-list '("stevensurgnier@gmail.com"
-                               "steven.surgnier@simple.com")
+ mu4e-maildir                        "~/mail"
+ user-mail-address                   "stevensurgnier@gmail.com"
+ my-mu4e-default-account             "stevensurgnier@gmail.com"
+ mu4e-get-mail-command               "true"
+ mu4e-update-interval                nil
+ mu4e-sent-messages-behavior         'delete
+ mu4e-compose-signature-auto-include nil
+ mu4e-user-mail-address-list
+ '("stevensurgnier@gmail.com"
+   "steven.surgnier@simple.com")
  my-mu4e-account-alist
  '(("steven.surgnier@simple.com"
     (mu4e-drafts-folder "/steven.surgnier@simple.com/[Gmail]/Drafts")
