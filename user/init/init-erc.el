@@ -125,21 +125,6 @@
   (if (erc-query-buffer-p)
       (setq erc-track-priority-faces-only 'all)))
 
-(defun erc-simple ()
-  "Connect to Simple."
-  (interactive)
-	(let* ((server "chat.banksimple.com")
-				 (port 9999)
-				 (nick "ssurgnier")
-				 (buffer (format "%s:%s" server port)))
-		(if (get-buffer buffer) (kill-buffer buffer))
-		(erc-tls :server    server
-						 :port      port
-						 :nick      nick
-						 :full-name "Steven Surgnier")
-		(switch-to-buffer buffer)
-		(insert (format "/pass %s:" nick))))
-
 (defun erc-freenode ()
   "Connect to freenode."
   (interactive)

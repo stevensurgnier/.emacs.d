@@ -83,7 +83,8 @@
     mu4e
     org-mode
     smart-mode-line
-    sql-preset-el)
+    sql-preset-el
+    znc)
   "El-get packages")
 
 (el-get 'sync steven/el-get-packages)
