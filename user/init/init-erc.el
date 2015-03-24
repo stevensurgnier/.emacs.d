@@ -1,6 +1,7 @@
 (require 'erc)
 (require 'erc-truncate)
 (require 'erc-hl-nicks)
+(require 'erc-image)
 (require 'erc-match)
 (require 'erc-track)
 (require 'tls)
@@ -24,7 +25,8 @@
                     stamp
                     track
                     truncate
-                    hl-nicks))
+                    hl-nicks
+                    image))
 (erc-update-modules)
 
 (setq erc-keywords '("\\bsteven\\b"

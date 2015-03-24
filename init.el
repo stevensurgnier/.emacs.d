@@ -29,6 +29,7 @@
     el-get
     erc
     erc-hl-nicks
+    erc-image
     ess
     ess-R-data-view
     find-file-in-project
