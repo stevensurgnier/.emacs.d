@@ -126,17 +126,3 @@
   ad-do-it
   (if (erc-query-buffer-p)
       (setq erc-track-priority-faces-only 'all)))
-
-(defun erc-freenode ()
-  "Connect to freenode."
-  (interactive)
-	(let* ((server "irc.freenode.net")
-				 (port 6667)
-				 (buffer (format "%s:%s" server port)))
-		(if (get-buffer buffer) (kill-buffer buffer))
-		(erc :server    server
-				 :port      port
-				 :nick      "stevensurgnier"
-				 :full-name "Steven Surgnier")
-		(switch-to-buffer buffer)
-		(insert "/msg NickServ identify ")))
