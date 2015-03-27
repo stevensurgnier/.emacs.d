@@ -12,4 +12,5 @@
 (setq
  znc-erc-connector 'erc
  znc-servers
- (list (my-znc-profile 'simple "chat.banksimple.com" "ssurgnier" 9999)))
+ (list (my-znc-profile 'simple "chat.banksimple.com" "ssurgnier" 9999)
+       (my-znc-profile 'furnace "flame.firrre.com" "stevensurgnier" 9090)))
