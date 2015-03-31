@@ -78,7 +78,7 @@
       erc-track-exclude-types '("JOIN"
                                 "NICK"
                                 "PART"
-				"TOPIC"
+                                "TOPIC"
                                 "QUIT"
                                 "MODE"
                                 "NOTICE"
