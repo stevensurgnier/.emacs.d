@@ -10,6 +10,11 @@
   (interactive "s command: ")
   (browse-url (format "http://docs.aws.amazon.com/redshift/latest/dg/r_%s.html" (upcase command))))
 
+(defun redshift-doc-at-point ()
+  "Open the docs for a Redshift command"
+  (interactive)
+  (redshift-doc (thing-at-point 'symbol)))
+
 (defun jenkins (job)
   "Open a jenkins job"
   (interactive "s job: ")
@@ -20,10 +25,20 @@
   (interactive "s term: ")
   (eww (format "http://www.thesaurus.com/browse/%s" term)))
 
+(defun thesaurus-at-point ()
+  "Open thesaurus for a given term"
+  (interactive)
+  (thesaurus (thing-at-point 'symbol)))
+
 (defun dictionary (term)
   "Open dictionary for a given term"
   (interactive "s term: ")
   (eww (format "http://dictionary.reference.com/browse/%s" term)))
+
+(defun dictionary-at-point ()
+  "Open dictionary for a given term"
+  (interactive)
+  (dictionary (thing-at-point 'symbol)))
 
 (defun banner (name)
   "Create a new banner"
