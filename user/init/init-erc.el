@@ -74,7 +74,7 @@
       erc-log-matches-alist '((keyword . "&activity")
                               (current-nick . "&activity"))
       erc-generate-log-file-name-function 'erc-generate-log-file-name-with-date
-      erc-hide-list '("JOIN" "NICK" "PART" "QUIT")
+      erc-hide-list '("JOIN" "NICK" "PART" "QUIT" "353")
       erc-track-exclude-types '("JOIN"
                                 "NICK"
                                 "PART"
