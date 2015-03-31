@@ -78,6 +78,7 @@
                       "NICK"
                       "PART"
                       "QUIT"
+                      "324"
                       "353")
       erc-track-exclude-types '("JOIN"
                                 "NICK"
