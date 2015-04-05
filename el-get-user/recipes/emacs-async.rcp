@@ -1,0 +1,6 @@
+(:name emacs-async
+       :description "Simple library for asynchronous processing in Emacs"
+       :website "http://github.com/jwiegley/emacs-async"
+       :type http-tar
+       :options ("xzf")
+       :url "http://github.com/jwiegley/emacs-async/archive/v1.2.tar.gz")
