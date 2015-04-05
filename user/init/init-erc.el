@@ -116,7 +116,8 @@
       erc-hide-timestamps nil
       erc-timestamp-only-if-changed-flag nil
       erc-timestamp-format "%Y-%m-%d %H:%M:%S "
-      erc-insert-timestamp-function 'erc-insert-timestamp-left)
+      erc-insert-timestamp-function 'erc-insert-timestamp-left
+      erc-image-inline-rescale 10)
 
 ;; make private messages appear urgent
 (defadvice erc-track-find-face
