@@ -70,9 +70,9 @@
 ;; install el-get packages
 (require 'el-get)
 (add-to-list 'el-get-recipe-path
-	     (expand-file-name "el-get-user/recipes" user-emacs-directory))
+             (expand-file-name "el-get/el-get/recipes" user-emacs-directory))
 (add-to-list 'el-get-recipe-path
-	     (expand-file-name "el-get/el-get/recipes" user-emacs-directory))
+             (expand-file-name "el-get-user/recipes" user-emacs-directory))
 (setq el-get-byte-compile t
       el-get-git-shallow-clone t
       el-get-user-package-directory (expand-file-name "el-get-user/init"
