@@ -71,6 +71,7 @@
       erc-join-buffer 'bury
       erc-log-channels-directory "~/.erc/logs/"
       erc-log-insert-log-on-open nil
+      erc-log-matches-flag t
       erc-log-matches-alist '((keyword . "&activity")
                               (current-nick . "&activity"))
       erc-generate-log-file-name-function 'erc-generate-log-file-name-with-date
