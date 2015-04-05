@@ -80,7 +80,6 @@
 (defvar steven/el-get-packages
   '(cider
     dash
-    emacs-async
     flycheck
     mu4e
     org-mode
