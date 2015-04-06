@@ -5,6 +5,7 @@
  user-mail-address                   "stevensurgnier@gmail.com"
  my-mu4e-default-account             "stevensurgnier@gmail.com"
  mu4e-get-mail-command               "true"
+ send-mail-function                  'smtpmail-send-it
  mu4e-update-interval                nil
  mu4e-sent-messages-behavior         'delete
  mu4e-compose-signature-auto-include nil
