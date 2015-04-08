@@ -50,6 +50,7 @@
       (error "No email account found"))))
 
 (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+(add-hook 'mu4e-compose-mode-hook 'mml-secure-message-sign-pgpmime)
 
 (require 'smtpmail)
 (setq
