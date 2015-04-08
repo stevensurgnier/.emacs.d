@@ -11,6 +11,7 @@
 							exec-path))
 
 (setenv "PATH" (mapconcat 'identity exec-path path-separator))
+(setenv "GPG_AGENT_INFO" nil)
 
 (require 'cl)
 
