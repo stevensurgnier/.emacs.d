@@ -15,11 +15,11 @@
     (set-frame-font (concat font-name "-" (number-to-string font-size)))))
 
 (defun set-font-name (name)
-  (interactive)
+  (interactive "sname: ")
   (set-font name nil))
 
 (defun set-font-size (size)
-  (interactive)
+  (interactive "nsize: ")
   (set-font nil size))
 
 (defun dec-font-size ()
