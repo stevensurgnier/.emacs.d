@@ -9,5 +9,6 @@
 (gif "woo" "http://www.reactiongifs.com/r/vhpy.gif")
 (gif "take-my-money" "http://www.keenandgraev.com/wp-content/uploads/2012/12/Take-my-Money-300x168.jpg")
 (gif "hang-in-there" "http://ecx.images-amazon.com/images/I/51S%2BpPtReeL._SY344_BO1,204,203,200_.jpg")
+(gif "clap-wave-pow" "http://1.bp.blogspot.com/-ED_iMFF3A5I/UmBTCvjmpWI/AAAAAAAAaMA/wclkpl5n0ss/s1600/eQ8ECXX.gif")
 
 (provide 'gif)
