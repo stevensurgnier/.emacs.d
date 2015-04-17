@@ -12,5 +12,6 @@
 (gif "clap-wave-pow" "http://1.bp.blogspot.com/-ED_iMFF3A5I/UmBTCvjmpWI/AAAAAAAAaMA/wclkpl5n0ss/s1600/eQ8ECXX.gif")
 (gif "kanye-happy-clap" "http://soundisstyle.com/wp-content/uploads/2014/03/Kanye-West-Clapping.gif")
 (gif "toociced" "http://img.pandawhale.com/103113-thats-a-bingo-gif-Imgur-pyw2.gif")
+(gif "oh-my-fuck" "https://i.imgur.com/jZOG1hO.gif")
 
 (provide 'gif)
