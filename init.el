@@ -131,7 +131,6 @@
       default-tab-width 2)
 (setq-default tab-width 2
               indent-tabs-mode nil)
-(load-theme 'solarized-dark t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
