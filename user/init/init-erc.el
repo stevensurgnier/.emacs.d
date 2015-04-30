@@ -31,7 +31,8 @@
 
 (setq erc-keywords '("\\bsteven\\b"
                      "\\bsteven's\\b"
-                     "analytics"
+                     "analytics/help"
+                     "github.banksimple.com/analytics"
                      "clojure"
                      "clojerks"
                      "kafka"
