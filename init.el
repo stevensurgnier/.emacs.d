@@ -28,9 +28,6 @@
   '(clojure-mode
     dash-at-point
     el-get
-    erc
-    erc-hl-nicks
-    erc-image
     ess
     ess-R-data-view
     find-file-in-project
@@ -88,8 +85,7 @@
     mu4e
     org-mode
     smart-mode-line
-    sql-preset-el
-    znc)
+    sql-preset-el)
   "El-get packages")
 
 (el-get 'sync steven/el-get-packages)
