@@ -41,6 +41,9 @@
     marmalade
     paredit
     rainbow-mode
+    rcirc
+    rcirc-color
+    rcirc-controls
     scala-mode
     scratch
     shell-here
