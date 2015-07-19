@@ -127,7 +127,9 @@
       visible-bell t
       make-backup-files nil
       backup-inhibited t
-      default-tab-width 2)
+      default-tab-width 2
+      ns-auto-hide-menu-bar t
+      ns-use-native-fullscreen nil)
 (setq-default tab-width 2
               indent-tabs-mode nil)
 (scroll-bar-mode -1)
