@@ -170,5 +170,5 @@
  ;; If there is more than one, they won't work right.
  '(rcirc-keyword ((t (:foreground "#d33682" :weight bold))))
  '(rcirc-timestamp ((t (:inherit default :foreground "#268bd2"))))
- '(rcirc-track-nick ((t (:foreground "#dc322f" :inverse-video t))))
+ '(rcirc-track-nick ((t (:foreground "#dc322f"))))
  '(rcirc-url ((t (:foreground "#b58900" :weight bold)))))
