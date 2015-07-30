@@ -46,7 +46,7 @@
 
 (add-hook 'rcirc-mode-hook 'my-rcirc-mode-setup)
 
-(defun my-rcirc-profile (host user port)
+(defun my-rcirc-profile (host user port &optional znc?)
   "Search auth-info for an entry matching HOST, USER, and PORT."
   (let* (
          (auth-info
@@ -58,18 +58,20 @@
             :port port
             :create nil)))
          (password (funcall (plist-get auth-info :secret))))
+    (message "login info %s %s %s" host user port)
     (list
      host
      :nick user
-     :password (format "%s:%s" user password)
+     :password (if znc? (format "%s:%s" user password) password)
      :full-name user
      :port port
      :encryption 'tls)))
 
 (setq rcirc-server-alist
       (list
-       (my-rcirc-profile "chat.banksimple.com" "ssurgnier" 9999)
-       (my-rcirc-profile "flame.firrre.com" "stevensurgnier" 9090)))
+       (my-rcirc-profile "chat.banksimple.com" "ssurgnier" 9999 t)
+       (my-rcirc-profile "flame.firrre.com" "stevensurgnier" 9090 t)
+       (my-rcirc-profile "banksimple.irc.slack.com" "steven" 6667)))
 
 (require 'rcirc-color)
 (setq rcirc-color-is-deterministic t)
