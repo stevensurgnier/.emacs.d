@@ -25,12 +25,15 @@
 
 ;; default packages
 (defvar steven/packages
-  '(clojure-mode
+  '(cider
+    clojure-mode
+    dash
     dash-at-point
     el-get
     ess
     ess-R-data-view
     find-file-in-project
+    flycheck
     gist
     ibuffer-git
     magit
